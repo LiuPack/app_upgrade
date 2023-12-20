@@ -1,7 +1,7 @@
-import 'package:app_upgrade/app_upgrade.dart';
-import 'package:app_upgrade/app_upgrade_method_channel.dart';
-import 'package:app_upgrade/app_upgrade_platform_interface.dart';
-import 'package:app_upgrade/src/app_market.dart';
+import 'package:app_update/app_upgrade.dart';
+import 'package:app_update/app_upgrade_method_channel.dart';
+import 'package:app_update/app_upgrade_platform_interface.dart';
+import 'package:app_update/src/app_market.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 

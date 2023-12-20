@@ -1,7 +1,7 @@
-import 'package:app_upgrade/app_upgrade_platform_interface.dart';
-import 'package:app_upgrade/src/app_market.dart';
-import 'package:app_upgrade/src/download_status.dart';
-import 'package:app_upgrade/src/simple_app_upgrade.dart';
+import 'package:app_update/app_upgrade_platform_interface.dart';
+import 'package:app_update/src/app_market.dart';
+import 'package:app_update/src/download_status.dart';
+import 'package:app_update/src/simple_app_upgrade.dart';
 import 'package:flutter/material.dart';
 
 class AppUpgrade {

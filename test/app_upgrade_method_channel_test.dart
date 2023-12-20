@@ -1,4 +1,4 @@
-import 'package:app_upgrade/app_upgrade_method_channel.dart';
+import 'package:app_update/app_upgrade_method_channel.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 

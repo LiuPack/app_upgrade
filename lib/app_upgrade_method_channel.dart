@@ -1,4 +1,4 @@
-import 'package:app_upgrade/src/app_market.dart';
+import 'package:app_update/src/app_market.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
