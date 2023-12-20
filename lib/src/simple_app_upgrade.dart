@@ -1,11 +1,12 @@
 import 'dart:io';
 
-import 'package:app_update/app_upgrade.dart';
-import 'package:app_update/src/app_market.dart';
-import 'package:app_update/src/download_status.dart';
-import 'package:app_update/src/liquid_progress_indicator.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+
+import '../app_upgrade.dart';
+import 'app_market.dart';
+import 'download_status.dart';
+import 'liquid_progress_indicator.dart';
 
 ///
 /// des:app升级提示控件

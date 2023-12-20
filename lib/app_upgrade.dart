@@ -1,8 +1,9 @@
-import 'package:app_update/app_upgrade_platform_interface.dart';
-import 'package:app_update/src/app_market.dart';
-import 'package:app_update/src/download_status.dart';
-import 'package:app_update/src/simple_app_upgrade.dart';
 import 'package:flutter/material.dart';
+
+import 'app_upgrade_platform_interface.dart';
+import 'src/app_market.dart';
+import 'src/download_status.dart';
+import 'src/simple_app_upgrade.dart';
 
 class AppUpgrade {
   static appUpgrade(
@@ -87,10 +88,8 @@ class AppUpgrade {
         context: context,
         barrierDismissible: false,
         builder: (context) {
-          return WillPopScope(
-            onWillPop: () async {
-              return false;
-            },
+          return PopScope(
+            canPop: false,
             child: Dialog(
                 shape: RoundedRectangleBorder(
                     borderRadius:

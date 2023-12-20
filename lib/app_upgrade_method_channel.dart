@@ -1,9 +1,9 @@
-import 'package:app_update/src/app_market.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'app_upgrade.dart';
 import 'app_upgrade_platform_interface.dart';
+import 'src/app_market.dart';
 
 /// An implementation of [AppUpgradePlatform] that uses method channels.
 class MethodChannelAppUpgrade extends AppUpgradePlatform {
