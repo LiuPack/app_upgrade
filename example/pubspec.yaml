@@ -17,7 +17,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  update_app:
+  app_upgrade_liupack:
     # When depending on this package from a real application you should use:
     #   app_upgrade: ^x.y.z
     # See https://dart.dev/tools/pub/dependencies#version-constraints

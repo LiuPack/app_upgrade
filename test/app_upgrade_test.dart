@@ -1,9 +1,9 @@
+import 'package:app_upgrade_liupack/app_upgrade.dart';
+import 'package:app_upgrade_liupack/app_upgrade_method_channel.dart';
+import 'package:app_upgrade_liupack/app_upgrade_platform_interface.dart';
+import 'package:app_upgrade_liupack/src/app_market.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-import 'package:update_app/app_upgrade.dart';
-import 'package:update_app/app_upgrade_method_channel.dart';
-import 'package:update_app/app_upgrade_platform_interface.dart';
-import 'package:update_app/src/app_market.dart';
 
 class MockAppUpgradePlatform
     with MockPlatformInterfaceMixin

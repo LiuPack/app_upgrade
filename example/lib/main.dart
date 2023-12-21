@@ -1,7 +1,7 @@
 import 'dart:io';
 
+import 'package:app_upgrade_liupack/app_upgrade.dart';
 import 'package:flutter/material.dart';
-import 'package:update_app/app_upgrade.dart';
 
 void main() {
   runApp(const MyApp());
