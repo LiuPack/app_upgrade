@@ -1,4 +1,4 @@
-name: app_upgrade_liupack
+name: app_upgrade
 description: "A new Flutter plugin for app upgrade"
 version: 1.0.0
 homepage: https://github.com/LiuPack
