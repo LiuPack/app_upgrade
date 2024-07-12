@@ -54,7 +54,6 @@ class AppUpgrade {
       }
     }).catchError((onError) {
       debugPrint("显示出错：$onError");
-      // print('$onError');
     });
   }
 
@@ -91,9 +90,7 @@ class AppUpgrade {
           return PopScope(
             canPop: false,
             child: Dialog(
-                shape: RoundedRectangleBorder(
-                    borderRadius:
-                        BorderRadius.all(Radius.circular(borderRadius))),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(borderRadius))),
                 backgroundColor: isDark ? const Color(0xFF302D41) : null,
                 child: SimpleAppUpgradeWidget(
                   title: title,
@@ -104,11 +101,7 @@ class AppUpgrade {
                   cancelTextStyle: cancelTextStyle,
                   okText: okText,
                   okTextStyle: okTextStyle,
-                  okBackgroundColors: okBackgroundColors ??
-                      [
-                        Theme.of(context).primaryColor,
-                        Theme.of(context).primaryColor
-                      ],
+                  okBackgroundColors: okBackgroundColors ?? [Theme.of(context).primaryColor, Theme.of(context).primaryColor],
                   progressBarColor: progressBarColor,
                   borderRadius: borderRadius,
                   downloadUrl: apkDownloadUrl,
@@ -151,10 +144,8 @@ class AppUpgrade {
   }
 
   /// 获取本机安装的应用市场
-  static Future<List<String>> getInstallMarket(
-      {List<String>? marketPackageNames}) async {
-    return AppUpgradePlatform.instance
-        .getInstallMarket(marketPackageNames: marketPackageNames);
+  static Future<List<String>> getInstallMarket({List<String>? marketPackageNames}) async {
+    return AppUpgradePlatform.instance.getInstallMarket(marketPackageNames: marketPackageNames);
   }
 }
 
@@ -187,5 +178,4 @@ class AppUpgradeInfo {
 typedef DownloadProgressCallback = Function(int count, int total);
 
 /// 下载状态变化回调
-typedef DownloadStatusChangeCallback = Function(DownloadStatus downloadStatus,
-    {dynamic error});
+typedef DownloadStatusChangeCallback = Function(DownloadStatus downloadStatus, {dynamic error});

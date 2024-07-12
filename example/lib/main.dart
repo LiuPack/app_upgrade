@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:app_upgrade_liupack/app_upgrade.dart';
+import 'package:app_upgrade/app_upgrade.dart';
 import 'package:flutter/material.dart';
 
 void main() {

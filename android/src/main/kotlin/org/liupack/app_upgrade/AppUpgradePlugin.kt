@@ -1,5 +1,3 @@
-@file:Suppress("DEPRECATION")
-
 package org.liupack.app_upgrade
 
 import android.content.ActivityNotFoundException
@@ -13,7 +11,6 @@ import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
-import io.flutter.plugin.common.MethodChannel.Result
 import java.io.File
 
 class AppUpgradePlugin : FlutterPlugin, MethodCallHandler {
@@ -26,7 +23,7 @@ class AppUpgradePlugin : FlutterPlugin, MethodCallHandler {
         channel.setMethodCallHandler(this)
     }
 
-    override fun onMethodCall(call: MethodCall, result: Result) {
+    override fun onMethodCall(call: MethodCall, result: MethodChannel.Result) {
         when (call.method) {
             "getAppInfo" -> {
                 getAppInfo(context, result)
@@ -69,13 +66,18 @@ class AppUpgradePlugin : FlutterPlugin, MethodCallHandler {
     /**
      * 获取app信息
      */
-    private fun getAppInfo(context: Context, result: Result) {
+    private fun getAppInfo(context: Context, result: MethodChannel.Result) {
         context.also {
             val packageInfo = it.packageManager.getPackageInfo(it.packageName, 0)
             val map = HashMap<String, String>()
             map["packageName"] = packageInfo.packageName
             map["versionName"] = packageInfo.versionName
-            map["versionCode"] = "${packageInfo.versionCode}"
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                map["versionCode"] = "${packageInfo.longVersionCode}"
+            } else {
+                @Suppress("DEPRECATION")
+                map["versionCode"] = "${packageInfo.versionCode}"
+            }
             result.success(map)
         }
     }
